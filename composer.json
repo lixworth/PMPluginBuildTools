@@ -1,0 +1,19 @@
+{
+    "name": "lixworth/plugin-build",
+    "type": "project",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "LixWorth",
+            "email": "lixworth@outlook.com"
+        }
+    ],
+    "require": {
+        "symfony/console": "^5.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "": ["src"]
+        }
+    }
+}
