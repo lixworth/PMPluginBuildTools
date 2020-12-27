@@ -11,12 +11,21 @@
 $args = getopt('d:b:');
 
 if(isset($args['d'])){
-    $dist = $args['d'];
+    if(substr($args['d'], -1) == "/"){
+        $dist = $args['d'];
+    }else{
+        $dist = $args['d']."/";
+    }
+
 }else{
     $dist = __DIR__ . '/dist/';
 }
 if(isset($args['b'])){
-    $build = $args['b'];
+    if(substr($args['b'], -1) == "/"){
+        $build = $args['b'];
+    }else{
+        $build = $args['b']."/";
+    }
 }else{
     $build = __DIR__ . '/plugins/';
 }
